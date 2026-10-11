@@ -6,6 +6,12 @@ This project demonstrates a medical image annotation workflow for colorectal pol
 
 Using Label Studio, I manually annotated 100 images with bounding boxes to identify polyps. The project focuses on image annotation, dataset organization, and preparation of labeled data for medical computer vision tasks.
 
+## Annotation Example
+
+The image below shows an example of a manually created polyp bounding box annotation using Label Studio.
+
+![Polyp bounding box annotation example](sample_images/polyp_annotation_example.jpg)
+
 ## Project Details
 
 - **Task:** Polyp detection and localization
