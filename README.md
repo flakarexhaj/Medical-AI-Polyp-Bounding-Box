@@ -1,96 +1,49 @@
-# Medical AI Polyp Bounding Box Annotation
+# Medical AI: Polyp Bounding Box Annotation
 
-## Overview
+## Project Overview
 
-This project demonstrates a medical image annotation workflow for colorectal polyp detection using colonoscopy images from the Kvasir-SEG dataset.
+This project demonstrates a medical image annotation workflow for colorectal polyp detection using endoscopic images from the Kvasir-SEG dataset.
 
-A sample of 100 colonoscopy images was selected and manually annotated using bounding boxes in Label Studio. Each bounding box was used to localize the visible colorectal polyp within the image.
+Using Label Studio, I manually annotated 100 images with bounding boxes to identify polyps. The project focuses on image annotation, dataset organization, and preparation of labeled data for medical computer vision tasks.
 
----
+## Project Details
 
-## Dataset
+- **Task:** Polyp detection and localization
+- **Annotation tool:** Label Studio
+- **Annotation type:** Bounding boxes
+- **Target class:** Polyp
+- **Number of annotated tasks:** 100
+- **Image domain:** Gastrointestinal endoscopy
 
-The project uses the Kvasir-SEG dataset, which contains colonoscopy images with corresponding polyp segmentation masks and bounding-box information.
+## Methodology
 
-For this project, a sample of 100 images was selected from the original dataset.
+1. Selected endoscopic images for annotation.
+2. Reviewed each image in Label Studio.
+3. Manually drew bounding boxes around visible polyps.
+4. Assigned the `Polyp` label.
+5. Exported the annotations in JSON format for further analysis and potential use in machine learning workflows.
 
-### Dataset Summary
+## Annotation Format
 
-| Property | Value |
-|---|---:|
-| Total images annotated | 100 |
-| Annotation type | Bounding Box |
-| Medical modality | Colonoscopy |
-| Target finding | Colorectal Polyp |
-| Annotation tool | Label Studio |
-| Annotation label | Polyp |
+The Label Studio export contains the annotation coordinates, bounding box dimensions, image dimensions, and class labels.
 
----
+The annotations are provided in:
 
-## Project Objective
+`project-10-at-2026-09-30-17-52-8e632aa2.json`
 
-The objective of this project was to demonstrate a complete medical image annotation workflow, including:
+## Skills Demonstrated
 
-- Medical image dataset preparation
-- Image selection and organization
-- Bounding-box annotation
-- Manual annotation in Label Studio
-- Annotation export
-- Medical AI dataset organization
+- Medical image annotation
+- Bounding box labeling
+- Label Studio
+- Dataset preparation
+- JSON annotation handling
+- Medical computer vision workflows
 
----
+## Dataset Acknowledgment
 
-## Annotation Workflow
+The project uses endoscopic images from the Kvasir-SEG dataset. The manual bounding box annotations were created as part of this project.
 
-### 1. Dataset Preparation
+## Disclaimer
 
-A sample of 100 images was selected from the Kvasir-SEG dataset.
-
-The images were organized into a dedicated project directory and prepared for annotation.
-
-The selection process was automated using the `select_sample.py` script.
-
-### 2. Label Studio Configuration
-
-A Label Studio project named `Colonoscopy Polyp Bounding Box` was created.
-
-The annotation interface was configured for object detection using rectangular bounding boxes.
-
-The following label was used:
-
-- `Polyp`
-
-### 3. Manual Annotation
-
-All 100 images were manually annotated in Label Studio.
-
-For each image, a bounding box was drawn around the visible colorectal polyp.
-
-The completed annotations were exported in JSON format for documentation and further use.
-
----
-
-## Project Structure
-
-```text
-Medical_AI_Polyp_Bounding_Box/
-│
-├── images/
-│   └── Original Kvasir-SEG images
-│
-├── masks/
-│   └── Kvasir-SEG reference segmentation masks
-│
-├── sample_images/
-│   └── 100 selected images used for annotation
-│
-├── kavsir_bboxes.json
-│   └── Kvasir-SEG reference bounding-box information
-│
-├── select_sample.py
-│   └── Script used to select the 100-image sample
-│
-├── project-10-at-2026-09-30-17-52-8e632aa2.json
-│   └── Label Studio annotation export
-│
-└── README.md
+This is an educational portfolio project and is not intended for clinical diagnosis or direct clinical decision-making.
